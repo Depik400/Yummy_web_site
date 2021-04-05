@@ -1,0 +1,54 @@
+<header class="header">
+  <div class="header__image">
+    {{#if registartion}}
+    <div class="container">
+      {{#if NotLogin}}
+      <div class="auth">
+        <div class="loginblock">
+          <a class="login_btn" href="#">login</a>
+          <form action="#" method="POST" id="login__form" class="login__open__form">
+            <input type="text" placeholder="login" name="name" class="input__login">
+            <input type="password" placeholder="password" name="pass" class="input__password">
+            <input class="sumbit__login" type="button" value="Войти">
+          </form>
+        </div>
+        <div class="registerblock">
+          <a href="/registration">register</a>
+        </div>
+      </div>
+      {{else}}
+      <div class="auth__container">
+        <div class="auth__user__profile">
+          <span class="username">{{username}}</span>
+          <img src="../img/Avatar.png" width="50" height="50" alt="">
+        </div>
+        <a href="/logout">Выйти</a>
+      </div>
+      {{/if}}
+    </div>
+    {{/if}}
+  </div>
+  <div class="mobile">
+    <div class="mobile__auth__block">
+      <div class="login__block">
+        <a class="login_btn" href="#">LOGIN</a>
+        <form action="/login/auth" method="POST" class="login__open__form">
+          <input type="text" placeholder="login" name="name" class="input__login">
+          <input type="password" placeholder="password" name="pass" class="input__password">
+          <button class="sumbit__login" type="submit"  value="">SUBMIT</button>
+      </div>
+      <div class="register__block">
+        <a href="#">REGISTER</a>
+      </div>
+    </div>
+  </div>
+
+</header>
+<div class="image__logo">
+  <img src="../img/logo.png" alt="" class="image__logo__log" />
+</div>
+<div class="bars">
+  <span class="fa_bars"></span>
+</div>
+
+    <script src="../src/menu.js" defer></script>
