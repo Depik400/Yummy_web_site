@@ -3,7 +3,7 @@
 //Вход
 $(".sumbit__login").on('click',()=>{
   $.ajax({
-      url: '/login/auth',
+      url: '/user/auth',
       type: 'POST',
       dataType: 'html',
       data:$('#login__form').serialize()
@@ -19,7 +19,7 @@ $(".sumbit__login").on('click',()=>{
 //Регистрация
 $('.registration__submit').on('click',function () {
   $.ajax({
-    url: '/login/register',
+    url: '/user/registration',
     type: 'POST',
     dataType: 'html',
     data: $("#registration").serialize(),

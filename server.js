@@ -8,6 +8,7 @@ const path = require("path");
 
 //const Routers
 const HomeRouter = require("./routers/home_router");
+const UserRouter = require("./routers/user_router");
 
 //configs
 require("./passport/passport-mongo");
@@ -30,9 +31,29 @@ app.engine(".hbs", exphbs);
 app.set("view engine", ".hbs");
 app.set("views", path.join(__dirname, "views"));
 
+//Установка сессии
+app.use(
+  session({
+    secret: "asdASDqwq",
+    store: new FileStore(),
+    cookie: {
+      path: "/",
+      httpOnly: true,
+      maxAge: 60 * 60 * 1000,
+    },
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 //Установка Routers
 
 app.use("/", HomeRouter);
+app.use('/user',UserRouter);
 
 app.listen(3000, () => {
   console.log("http://localhost:3000/");

@@ -5,7 +5,7 @@ const HomeRouter = express.Router();
 
 HomeRouter.get('/',home_controller.index);
 
-HomeRouter.get('/registration');
+
 
 
 module.exports = HomeRouter;
