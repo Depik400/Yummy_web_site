@@ -38,14 +38,14 @@ exports.profile_admin = function (req, res) {
   if (req.user != undefined) {
     if (req.user.role == "administrator") {
       console.log(req.user.role);
-      user.find({}).exec((err, user) => {
+      user.find({}).lean().exec((err, user) => {
         var json = JSON.stringify(user);
         console.log(json);
         res.render("index", {
           cases: "administrator",
           username: req.user.username,
           NotLogin: false,
-          users: JSON.stringify(user)
+          users: user
         });
       });
     }
