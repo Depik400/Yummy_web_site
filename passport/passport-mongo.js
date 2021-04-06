@@ -35,7 +35,7 @@ function(req, username, password, done) {
           var newUser = new User();
           newUser.username = username;
           newUser.password = GeneratePasswordHash(password);
-          newUser.status = 'simple';
+          newUser.role = 'simple';
           newUser.save(function(err) {
               if (err)
                   throw err;

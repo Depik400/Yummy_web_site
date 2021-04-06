@@ -18,5 +18,6 @@ router.get('/logout',passport.authenticationMiddleware,user_controller.logout)
 
 router.get('/profile',passport.authenticationMiddleware,user_controller.profile);
 
+router.get('/admin',passport.authenticationMiddleware,user_controller.profile_admin);
 
 module.exports = router;
