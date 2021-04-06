@@ -3,7 +3,7 @@ const home_controller = require('../controllers/home_controller');
 
 const HomeRouter = express.Router();
 
-HomeRouter.get('/',);
+HomeRouter.get('/',home_controller.index);
 
 HomeRouter.get('/registration');
 
