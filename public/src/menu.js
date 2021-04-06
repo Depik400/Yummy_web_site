@@ -4,12 +4,11 @@ const profile = document.querySelector('.auth__user__profile');
 
 if(profile != undefined){
     profile.addEventListener('click',()=>{
-        document.location = '/profile';
+        document.location = '/user/profile';
     });
 }
 
 let exit = false;
-
 
 bars.addEventListener('click',()=>{
     if(!exit){
@@ -23,7 +22,9 @@ bars.addEventListener('click',()=>{
         exit = false;
     }
 });
-
+$('.image__logo').click(() =>{
+    document.location = '/';
+});
 ////Animation
 $(".login__open__form").hide();
 

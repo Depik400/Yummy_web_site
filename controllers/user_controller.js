@@ -30,7 +30,11 @@ exports.logout = function (req, res) {
   });
 };
 
-exports.profile = (req, res) => {
+exports.profile = (req, res) => { 
+  console.log(req.user.role);
+  if(req.user.role == "administrator"){
+    res.redirect('/user/admin')
+  }
   res.send("successful login");
 };
 
@@ -40,7 +44,7 @@ exports.profile_admin = function (req, res) {
       console.log(req.user.role);
       user.find({}).lean().exec((err, user) => {
         var json = JSON.stringify(user);
-        console.log(json);
+       // console.log(json);
         res.render("index", {
           cases: "administrator",
           username: req.user.username,
