@@ -121,6 +121,13 @@ body {
   left: 40px;
   width: auto;
   height: 85px;
+  transition: all 0.1s ease-in-out 0.1s;
+  border: none;
+}
+
+.image__logo__log:hover{
+  border: 2px solid #3cce7b;
+  border-radius: 10px;
 }
 
 .top__menu__inner {
