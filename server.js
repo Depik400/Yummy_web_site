@@ -18,7 +18,10 @@ const User = require("./models/user");
 
 var app = express();
 //Подключение базы данных
-mongoose.connect("mongodb://localhost:27017/passport", { useNewUrlParser: true, seUnifiedTopology: true,});
+mongoose.connect("mongodb://localhost:27017/passport", {
+  useNewUrlParser: true,
+  seUnifiedTopology: true,
+});
 //Подключение боди парсера и хбс
 app.use(body_parser.urlencoded({ extended: false }));
 app.use(express.static("./public"));
