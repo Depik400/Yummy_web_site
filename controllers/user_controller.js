@@ -1,6 +1,7 @@
 const passport = require("passport");
 require("../passport/passport-mongo");
 const user = require("../models/user");
+const multerUploader = require('../passport/multer-config');
 
 exports.get_registration = function (req, res) {
   res.render("index", {
@@ -57,3 +58,8 @@ exports.profile_admin = function (req, res) {
     }
   }
 };
+
+exports.upload_title_config = function(req,res,next) {
+  console.log(req.body);
+  console.log(req.file);
+}

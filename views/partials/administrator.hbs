@@ -2,19 +2,17 @@
     <div class="container">
         <div class="main__window__video">
             <div class="form__video">
-                <input type="text" class="important_inputs" id="title" placeholder="title">
-                <input type="text" class="important_inputs" id="status" placeholder="status">
-              <input type="number" class="important_inputs" id="rating" placeholder="rating">
-                <input type="text" class="important_inputs" id="studio" placeholder="studio">
-                <input type="text" class="important_inputs" id="type" placeholder="type">
-                <input type="number" id="series" placeholder="series">
+                <input type="text" class="important_inputs" id="title" name="title" placeholder="title">
+                <input type="text" class="important_inputs" id="status" name="status" placeholder="status">
+              <input type="number" class="important_inputs" id="rating" name="rating" placeholder="rating">
+                <input type="text" class="important_inputs" id="studio" name="studio" placeholder="studio">
+                <input type="text" class="important_inputs" id="type" name="type" placeholder="type">
+                <input type="number" class="important_inputs" id="series" name="series" placeholder="series">
                 <input type="button" id="video_send" value="добавить">
             </div>
             <div class="file__upload">
-                <form action="/video/new/image" enctype="multipart/form-data" method="post"></form>
-                <input type="file" id="imgInp" placeholder="" style="display: none;">
+                <input type="file" id="imgInp" class="important_inputs" name="upload" placeholder="" style="display: none;">
                 <img id='blah' src="../img/upload_photo.png" alt="">
-                <button type="submit" id="image_submit" style="display: none;"></button>
             </div>
         </div>
 
@@ -39,7 +37,4 @@
     </div>
 </div>
  <link rel="stylesheet" href="../style/administrator_style.css">
-<script src="../src/administrator_form.js">
-
-
-</script>
+<script src="../src/administrator_form.js"></script>
