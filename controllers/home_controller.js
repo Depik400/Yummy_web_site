@@ -1,4 +1,5 @@
 const passport = require('passport');
+const video = require('../models/video');
 
 exports.index = function(req,res) {
     var username;
@@ -7,9 +8,16 @@ exports.index = function(req,res) {
         check = false;
         username = req.user.username;
     }
+
+    video.find({}).lean().exec((err,video) => {
+        console.log(video);
+   
+
     res.render('index',{
         cases: 'main_screen',
         NotLogin: check,
-        username: username
+        username: username,
+        titles:video
     });
+});
 }

@@ -2,35 +2,36 @@
   <div class="container">
     <div class="content__page__all">
       <div class="content__page__movie">
+        {{#each titles}}
         <table class="tablemovie">
           <th></th>
           <th></th>
+
           <tr>
             <td>
-              <h1>Дайкон</h1>
-            </td>
-          </tr>
-          <tr>  
-            <td>
-              <h2>Daicon <span>Opening</span> Animations</h2>
+              <h1>{{title}}, Оценка: {{rating}}</h1>
             </td>
           </tr>
           <tr>
             <td>
-              <h3>Daikon</h3>
+              <h2>{{studio}}</h2>
             </td>
           </tr>
           <tr>
             <td>
-              <p>Hello</p>
+              <h3>{{status}}</h3>
             </td>
           </tr>
+          <tr>
+            <td>
+              <p>{{series}}</p>
+            </td>
+          </tr>
+
         </table>
-        <img id="daicon" src="../img/daicon.jpg" alt="">
+        <img id="daicon" src="{{image_path}}" alt="">
+        {{/each}}
       </div>
-      <iframe src="https://www.youtube.com/embed/7ps7IoJFMZo" allowfullscreen="allowfullscreen"
-        mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen"
-        oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" frameborder="0"></iframe>
     </div>
   </div>
 </div>
