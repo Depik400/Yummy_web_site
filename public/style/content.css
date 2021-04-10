@@ -1,6 +1,5 @@
 
 .content__page__all{
-    background: white;
     width: 70%;
 }
 
@@ -14,39 +13,51 @@
 
 .content__page__movie{
     margin-top: 30px;
-    background: white;
+    padding:30PX;
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
 }
 
-#daicon{
-    width: 300px;
-    height: auto;
+.titles_main_info{
+    width: 50%;
 }
 
-.tablemovie tr td > h2,h3,p{
+.title_id{
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    border-bottom: 3px black solid;
+    margin-bottom: 5px ;
+}
+
+.title_id > h3 {
+    margin: 10px;
+}
+
+.box {
+    position: relative;
+    overflow:hidden;
+    width:50%;
+    padding: 0;
+    height:500px;
+ }
+ 
+ .box img {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:auto;
+    height:auto;
+    object-fit:cover;
+ }
+
+titles_main_info > h3{
+    margin: 10px;
+    padding: 0;
     font-size: 14px;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-}
-.tablemovie tr td > h1, h2,h3,p{
-    margin: 0;
-    padding: 0;
     font-family: 'Open Sans',sans-serif;
-}
-
-@media screen and (max-width:480px){
-    .content__page__all{
-        width: 100%;
-    }
-
-    .content__page__all iframe{
-        width: 200px;
-    }
-
-    #daicon{
-        width: 100px;
-    }
 }

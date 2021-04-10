@@ -22,7 +22,7 @@ $("#imgInp").change(function () {
 
 // Функции ниже отвечают за отправление нового аниме на сервер
 
-function EmptyInputsCheck(){
+function EmptyInputsCheck() {
   var AllInputs = document.querySelectorAll(".important_inputs");
   AllInputs.forEach((elem) => {
     if (elem.value == "") {
@@ -33,22 +33,20 @@ function EmptyInputsCheck(){
   return true;
 }
 
-function SetupFormData(){
+function SetupFormData() {
   var form = new FormData();
-
-  form.append('title', $('#title').val());
-  form.append('status',$('#status').val());
-  form.append('rating',$('#rating').val());
-  form.append('studio',$('#studio').val());
-  form.append('type',$('#type').val());
-  form.append('series',$('#series').val());
-  form.append('upload',$('#imgInp')[0].files[0]);
+  form.append("title", $("#title").val());
+  form.append("status", $("#status").val());
+  form.append("rating", $("#rating").val());
+  form.append("studio", $("#studio").val());
+  form.append("type", $("#type").val());
+  form.append("series", $("#series").val());
+  form.append("upload", $("#imgInp")[0].files[0]);
   return form;
 }
 
 $("#video_send").click(() => {
-
-  if(!EmptyInputsCheck){
+  if (!EmptyInputsCheck) {
     return;
   }
 
