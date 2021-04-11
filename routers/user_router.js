@@ -9,7 +9,7 @@ const multerUploader = require("../passport/multer-config");
 
 router.post(
   "/upload/title",
-  multerUploader,
+  multerUploader.uploadFile,
   user_controller.upload_title_config
 );
 
