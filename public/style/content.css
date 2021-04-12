@@ -54,3 +54,19 @@
     font-size: 14px;
     font-family: 'Open Sans',sans-serif;
 }
+
+@media screen and (max-width: 768px){
+    .content__page__all{
+        width: 100%;
+    }
+    .titles_main_info{
+        width: 100%;
+    }
+    .box{
+        width: 100%;
+    }
+
+    .content__page__movie{
+        flex-direction: column;
+    }
+}

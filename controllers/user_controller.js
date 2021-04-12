@@ -1,7 +1,6 @@
 const passport = require("passport");
 require("../passport/passport-mongo");
 const user = require("../models/user");
-const multerUploader = require("../passport/multer-config");
 const Video = require("../models/video");
 const path = require("path");
 

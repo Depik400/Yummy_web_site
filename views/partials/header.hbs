@@ -30,16 +30,26 @@
   </div>
   <div class="mobile">
     <div class="mobile__auth__block">
+      {{#if NotLogin}}
       <div class="login__block">
         <a class="login_btn" href="#">LOGIN</a>
-        <form action="/login/auth" method="POST" class="login__open__form">
+        <form action="#" method="POST" id="login__form__mobile" class="login__open__form">
           <input type="text" placeholder="login" name="name" class="input__login">
           <input type="password" placeholder="password" name="pass" class="input__password">
-          <button class="sumbit__login" type="submit" value="">SUBMIT</button>
+          <input class="sumbit__login" id="sumbit__login__mobile" type="button" value="Submit">
       </div>
       <div class="register__block">
         <a href="/user/registration">REGISTER</a>
       </div>
+      {{else}}
+            <div class="auth__container">
+        <div class="auth__user__profile">
+          <span class="username">{{username}}</span>
+          <img src="../img/Avatar.png" width="50" height="50" alt="">
+        </div>
+        <a href="/user/logout">Выйти</a>
+      </div>     
+      {{/if}}
     </div>
   </div>
 </header>

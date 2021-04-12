@@ -63,3 +63,14 @@ input::-webkit-inner-spin-button {
 .user_list thead th {
     font-weight: 400;
 }
+
+@media screen and (max-width: 768px){
+    .main__window__video {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .form__video input {
+        width: 300px;
+    }
+}

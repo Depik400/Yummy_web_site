@@ -14,6 +14,20 @@ $(".sumbit__login").on('click',()=>{
       }
   });
 });
+
+$("#sumbit__login__mobile").on('click',()=>{
+  $.ajax({
+      url: '/user/auth',
+      type: 'POST',
+      dataType: 'html',
+      data:$('#login__form__mobile').serialize()
+  }).done((d) => {
+    if(d != 'error')
+      {
+        document.location = '/';
+      }
+  });
+});
 //
 
 //Регистрация
