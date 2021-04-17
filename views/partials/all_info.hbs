@@ -4,8 +4,13 @@
       {{#each titles}}
       <div class="content__page__movie">
 
-        <div class="title_id">
-          <h3>{{title}}</h3>
+        <div class="title_menu">
+          <div class="title_id">
+            <h3>{{title}}</h3>
+          </div>
+          <div class="title_delete">
+            <span></span>
+          </div>
         </div>
         <div class="titles_main_info">
           <h3>{{rating}}</h3>
@@ -16,7 +21,6 @@
         <div class="box">
           <img src="{{image_path}}" alt="{{title}}">
         </div>
-
       </div>
       {{/each}}
     </div>
