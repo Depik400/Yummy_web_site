@@ -6,6 +6,4 @@ const HomeRouter = express.Router();
 HomeRouter.get('/',home_controller.index);
 
 
-
-
 module.exports = HomeRouter;

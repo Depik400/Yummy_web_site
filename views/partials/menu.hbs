@@ -13,8 +13,29 @@
 <div class="top__search">
   <div class="container">
     <div class="search__back__ground">
-      <input type="text" placeholder="Введите запрос" class="search" />
+      <form action="/" method="GET" class="search_form">
+        <input name='title_name' type="text" placeholder="Введите запрос" class="search" />
+      </form>
     </div>
   </div>
   {{/if}}
 </div>
+
+<script>
+  $('.search').change(() => {
+    console.log($('.search').val())
+    $('.search_form').trigger('submit');
+  });
+
+/*var obj = {
+search: $('.search').val()
+}
+$.ajax({
+method: "GET",
+url: "/search/filter",
+ContentType: "application/json",
+data: obj
+})
+})*/
+
+</script>

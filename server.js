@@ -25,6 +25,7 @@ mongoose.connect("mongodb://localhost:27017/passport", {
 });
 //Подключение боди парсера и хбс
 app.use(body_parser.urlencoded({ extended: false }));
+app.use(body_parser.json());
 app.use(express.static("./public"));
 //
 app.engine(".hbs", exphbs);
